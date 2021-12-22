@@ -10,7 +10,7 @@ import com.ian.designpattern.ood.lsp.ToyGun;
 
 
 @SpringBootTest
-public class LSP {
+public class LSPTest {
 	
 	@Test
 	void test() {
