@@ -16,6 +16,6 @@ public class LSP {
 	void test() {
 		Soldier soldier = new Soldier();
 		soldier.killEnemy(new Rifle());
-		soldier.killEnemy(new ToyGun());
+		//soldier.killEnemy(new ToyGun());
 	}
 }

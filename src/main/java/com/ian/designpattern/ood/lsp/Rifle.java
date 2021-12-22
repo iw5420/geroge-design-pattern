@@ -1,6 +1,6 @@
 package com.ian.designpattern.ood.lsp;
 
-public class Rifle extends Gun {
+public class Rifle extends WeaponGun {
 
 	@Override
 	void shoot() {
