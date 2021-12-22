@@ -1,4 +1,4 @@
-package com.ian.designpattern.srp;
+package com.ian.designpattern.ood.srp;
 
 import java.util.ArrayList;
 import java.util.List;
