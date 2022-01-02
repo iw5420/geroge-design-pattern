@@ -11,7 +11,6 @@ class SRPTest {
 
 	@Test
 	void test() {
-		System.out.println("hello");
 		//new CustomerChart().displayChart();
 		CustomerChart customerChart = new CustomerChart();
 		customerChart.setCustomerDao(new CustomerDao());
