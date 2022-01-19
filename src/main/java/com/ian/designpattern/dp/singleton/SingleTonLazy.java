@@ -2,15 +2,22 @@ package com.ian.designpattern.dp.singleton;
 
 public class SingleTonLazy {
 	//懶漢式 lazy
-	private static SingleTonLazy SingleTonLazy = null;
+	private static SingleTonLazy singleTon = null;
 	private SingleTonLazy() {
 		
 	}
 	
 	public static SingleTonLazy getInstance() {
-		if(SingleTonLazy==null) {
-			SingleTonLazy = new SingleTonLazy();
+		System.out.println("SingleTonLazy " + "getInstance");
+		if(singleTon==null) {
+			try {
+				Thread.sleep(3000L);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			singleTon = new SingleTonLazy();
 		}
-		return SingleTonLazy;
+		return singleTon;
 	}
 }

@@ -8,11 +8,26 @@ import com.ian.designpattern.dp.singleton.SingleTonLazy;
 @SpringBootTest
 public class SingleTonTest {
 
-	@Test
+	//@Test
 	void test() {
 		System.out.println("this is A: " + SingleTonHungry.getInstance());
 		System.out.println("this is B: " + SingleTonLazy.getInstance());
 		System.out.println("this is A: " + SingleTonHungry.getInstance());
 		System.out.println("this is B: " + SingleTonLazy.getInstance());
+	}
+	
+	@Test
+	void threadTest() {
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				System.out.println("this is SingleTon Object: " + SingleTonLazy.getInstance());
+				
+			}
+			
+		}).start();
+		
+		System.out.println("this is SingleTon Object: " + SingleTonLazy.getInstance());
 	}
 }
