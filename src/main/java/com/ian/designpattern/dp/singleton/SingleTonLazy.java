@@ -7,7 +7,7 @@ public class SingleTonLazy {
 		
 	}
 	
-	public static SingleTonLazy getInstance() {
+	public synchronized static SingleTonLazy getInstance() {
 		System.out.println("SingleTonLazy " + "getInstance");
 		if(singleTon==null) {
 			try {
