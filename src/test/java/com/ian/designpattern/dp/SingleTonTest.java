@@ -2,18 +2,17 @@ package com.ian.designpattern.dp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-
-import com.ian.designpattern.dp.singleton.SingleTonA;
-import com.ian.designpattern.dp.singleton.SingleTonB;
+import com.ian.designpattern.dp.singleton.SingleTonHungry;
+import com.ian.designpattern.dp.singleton.SingleTonLazy;
 
 @SpringBootTest
 public class SingleTonTest {
 
 	@Test
 	void test() {
-		System.out.println("this is A: " + SingleTonA.getInstance());
-		System.out.println("this is B: " + SingleTonB.getInstance());
-		System.out.println("this is A: " + SingleTonA.getInstance());
-		System.out.println("this is B: " + SingleTonB.getInstance());
+		System.out.println("this is A: " + SingleTonHungry.getInstance());
+		System.out.println("this is B: " + SingleTonLazy.getInstance());
+		System.out.println("this is A: " + SingleTonHungry.getInstance());
+		System.out.println("this is B: " + SingleTonLazy.getInstance());
 	}
 }
