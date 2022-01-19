@@ -8,6 +8,7 @@ public class SingleTonDoubleCheck {
 	}
 	
 	public static SingleTonDoubleCheck getInstance() {
+		System.out.println("SingleTonDoubleCheck " + "getInstance");
 		if(singleTon == null) {
 			synchronized(SingleTonDoubleCheck.class){
 				if(singleTon == null) {
