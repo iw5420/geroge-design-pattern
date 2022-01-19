@@ -2,6 +2,8 @@ package com.ian.designpattern.dp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import com.ian.designpattern.dp.singleton.SingleTonDoubleCheck;
 import com.ian.designpattern.dp.singleton.SingleTonHungry;
 import com.ian.designpattern.dp.singleton.SingleTonLazy;
 
@@ -22,12 +24,12 @@ public class SingleTonTest {
 
 			@Override
 			public void run() {
-				System.out.println("this is SingleTon Object: " + SingleTonLazy.getInstance());
+				System.out.println("this is SingleTon Object: " + SingleTonDoubleCheck.getInstance());
 				
 			}
 			
 		}).start();
 		
-		System.out.println("this is SingleTon Object: " + SingleTonLazy.getInstance());
+		System.out.println("this is SingleTon Object: " + SingleTonDoubleCheck.getInstance());
 	}
 }
