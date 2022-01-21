@@ -1,16 +1,16 @@
 package com.ian.designpattern.dp.singleton;
 
-public class SingleTonHolder {
+public class SingletonHolder {
 	
 	private static class SingleTonInnerHolder{
-		private static SingleTonHolder instance = new SingleTonHolder();
+		private static SingletonHolder instance = new SingletonHolder();
 	}
 	
-	private SingleTonHolder() {
+	private SingletonHolder() {
 		System.out.println("SingleTonHolder " + "create");
 	}
 
-	public static SingleTonHolder getInstance() {
+	public static SingletonHolder getInstance() {
 		System.out.println("SingleTonHolder " + "getInstance");
 		try {
 			Thread.sleep(3000);

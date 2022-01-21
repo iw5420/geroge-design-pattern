@@ -1,13 +1,13 @@
 package com.ian.designpattern.dp.singleton;
 
-public class SingleTonHungry {
+public class SingletonHungry {
 	//餓漢式 hungry
-	private static SingleTonHungry singleTon = new SingleTonHungry();
-	private SingleTonHungry() {
+	private static SingletonHungry singleTon = new SingletonHungry();
+	private SingletonHungry() {
 		
 	}
 	
-	public static SingleTonHungry getInstance() {
+	public static SingletonHungry getInstance() {
 		System.out.println("SingleTonHungry " + "getInstance");
 		try {
 			Thread.sleep(3000L);

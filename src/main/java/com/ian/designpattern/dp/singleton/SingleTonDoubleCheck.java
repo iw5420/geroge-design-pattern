@@ -1,16 +1,16 @@
 package com.ian.designpattern.dp.singleton;
 
-public class SingleTonDoubleCheck {
-	private volatile static SingleTonDoubleCheck singleTon = null;
+public class SingletonDoubleCheck {
+	private volatile static SingletonDoubleCheck singleTon = null;
 	
-	private SingleTonDoubleCheck() {
+	private SingletonDoubleCheck() {
 		System.out.println(this.getClass().getSimpleName());
 	}
 	
-	public static SingleTonDoubleCheck getInstance() {
+	public static SingletonDoubleCheck getInstance() {
 		System.out.println("SingleTonDoubleCheck " + "getInstance");
 		if(singleTon == null) {
-			synchronized(SingleTonDoubleCheck.class){
+			synchronized(SingletonDoubleCheck.class){
 				if(singleTon == null) {
 					try {
 						Thread.sleep(3000L);
@@ -18,7 +18,7 @@ public class SingleTonDoubleCheck {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
-					singleTon = new SingleTonDoubleCheck();
+					singleTon = new SingletonDoubleCheck();
 				}
 			}
 		}

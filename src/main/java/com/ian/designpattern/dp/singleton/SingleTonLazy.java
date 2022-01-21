@@ -1,13 +1,13 @@
 package com.ian.designpattern.dp.singleton;
 
-public class SingleTonLazy {
+public class SingletonLazy {
 	//懶漢式 lazy
-	private static SingleTonLazy singleTon = null;
-	private SingleTonLazy() {
+	private static SingletonLazy singleTon = null;
+	private SingletonLazy() {
 		
 	}
 	
-	public synchronized static SingleTonLazy getInstance() {
+	public synchronized static SingletonLazy getInstance() {
 		System.out.println("SingleTonLazy " + "getInstance");
 		if(singleTon==null) {
 			try {
@@ -16,7 +16,7 @@ public class SingleTonLazy {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			singleTon = new SingleTonLazy();
+			singleTon = new SingletonLazy();
 		}
 		return singleTon;
 	}

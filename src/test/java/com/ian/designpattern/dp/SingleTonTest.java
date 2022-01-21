@@ -3,20 +3,20 @@ package com.ian.designpattern.dp;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.ian.designpattern.dp.singleton.SingleTonDoubleCheck;
-import com.ian.designpattern.dp.singleton.SingleTonHolder;
-import com.ian.designpattern.dp.singleton.SingleTonHungry;
-import com.ian.designpattern.dp.singleton.SingleTonLazy;
+import com.ian.designpattern.dp.singleton.SingletonDoubleCheck;
+import com.ian.designpattern.dp.singleton.SingletonHolder;
+import com.ian.designpattern.dp.singleton.SingletonHungry;
+import com.ian.designpattern.dp.singleton.SingletonLazy;
 
 @SpringBootTest
-public class SingleTonTest {
+public class SingletonTest {
 
 	//@Test
 	void test() {
-		System.out.println("this is A: " + SingleTonHungry.getInstance());
-		System.out.println("this is B: " + SingleTonLazy.getInstance());
-		System.out.println("this is A: " + SingleTonHungry.getInstance());
-		System.out.println("this is B: " + SingleTonLazy.getInstance());
+		System.out.println("this is A: " + SingletonHungry.getInstance());
+		System.out.println("this is B: " + SingletonLazy.getInstance());
+		System.out.println("this is A: " + SingletonHungry.getInstance());
+		System.out.println("this is B: " + SingletonLazy.getInstance());
 	}
 	
 	@Test
@@ -25,12 +25,12 @@ public class SingleTonTest {
 
 			@Override
 			public void run() {
-				System.out.println("this is SingleTon Object: " + SingleTonHolder.getInstance());
+				System.out.println("this is SingleTon Object: " + SingletonHolder.getInstance());
 				
 			}
 			
 		}).start();
 		
-		System.out.println("this is SingleTon Object: " + SingleTonHolder.getInstance());
+		System.out.println("this is SingleTon Object: " + SingletonHolder.getInstance());
 	}
 }
