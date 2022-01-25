@@ -8,7 +8,7 @@ import com.ian.designpattern.dp.simpleFactory.Mcdonlad;
 
 
 @SpringBootTest
-public class SimpleFactory {
+public class SimpleFactoryTest {
 
 
 	@Test

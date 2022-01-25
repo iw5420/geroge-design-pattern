@@ -10,7 +10,7 @@ import com.ian.designpattern.dp.abstractFactory.IStore;
 import com.ian.designpattern.dp.abstractFactory.Mcdonald;
 
 @SpringBootTest
-public class AbstractFactory {
+public class AbstractFactoryTest {
 	
 	@Test
 	void test() {

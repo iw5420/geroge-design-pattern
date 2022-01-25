@@ -8,7 +8,7 @@ import com.ian.designpattern.dp.factoryMethod.IStore;
 import com.ian.designpattern.dp.factoryMethod.KFC;
 
 @SpringBootTest
-public class FactoryMethod {
+public class FactoryMethodTest {
 
 	@Test
 	void test() {
