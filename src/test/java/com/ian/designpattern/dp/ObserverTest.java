@@ -11,12 +11,13 @@ public class ObserverTest {
 	@Test
 	void test() { 
 		WeatherStation weatherStation = new WeatherStation();
-		LaoWang laoWang = new LaoWang(weatherStation);
-		XiaoLi xiaoLi = new XiaoLi(weatherStation);
+		LaoWang laoWang = new LaoWang();
+		XiaoLi xiaoLi = new XiaoLi();
 		weatherStation.registerObserver(laoWang);
 		weatherStation.registerObserver(xiaoLi);
 		weatherStation.setTemperature(20);
 		weatherStation.setTemperature(-10);
+		weatherStation.setDampness(60);
 	}
 
 }
