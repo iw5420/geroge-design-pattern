@@ -20,9 +20,9 @@ public class WeatherStation implements WeatherSubject{
 	}
 
 	@Override
-	public void notifyObserver(Weather weather) {
+	public void notifyObserver() {
 		for(Observer o : observers) {
-			o.update(weather);
+			o.update(this);
 		}
 		
 	}
@@ -37,20 +37,20 @@ public class WeatherStation implements WeatherSubject{
 	
 	public void setDampness(int dampness) {
 		this.dampness = dampness;
-		notifyWeather(dampness);
+		notifyObserver();
 	}
 	
 	public void setTemperature(int temperature) {
 		this.temperature = temperature;
-		notifyWeather(dampness);
+		notifyObserver();
 	}
 
-	private void notifyWeather(int dampness) {
-		Weather weather = new Weather();
-		weather.setDampness(dampness);
-		weather.setTemperature(temperature);
-		notifyObserver(weather);
-	}
+//	private void notifyWeather(int dampness) {
+//		Weather weather = new Weather();
+//		weather.setDampness(dampness);
+//		weather.setTemperature(temperature);
+//		notifyObserver(weather);
+//	}
 	
 		
 }
